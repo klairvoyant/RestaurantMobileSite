@@ -1,0 +1,77 @@
+<%= form_for(@hour) do |f| %>
+  <% if @hour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hour.errors.count, "error") %> prohibited this hour from being saved:</h2>
+
+      <ul>
+      <% @hour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :restaurant_id %><br />
+    <%= f.text_field :restaurant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :isOpenSunday %><br />
+    <%= f.check_box :isOpenSunday %>
+  </div>
+  <div class="field">
+    <%= f.label :isOpenMonday %><br />
+    <%= f.check_box :isOpenMonday %>
+  </div>
+  <div class="field">
+    <%= f.label :isOpenTuesday %><br />
+    <%= f.check_box :isOpenTuesday %>
+  </div>
+  <div class="field">
+    <%= f.label :isOpenWednesday %><br />
+    <%= f.check_box :isOpenWednesday %>
+  </div>
+  <div class="field">
+    <%= f.label :isOpenThursday %><br />
+    <%= f.check_box :isOpenThursday %>
+  </div>
+  <div class="field">
+    <%= f.label :isOpenFriday %><br />
+    <%= f.check_box :isOpenFriday %>
+  </div>
+  <div class="field">
+    <%= f.label :isOpenSaturday %><br />
+    <%= f.check_box :isOpenSaturday %>
+  </div>
+  <div class="field">
+    <%= f.label :SundayOpen %><br />
+    <%= f.text_field :SundayOpen %>
+  </div>
+  <div class="field">
+    <%= f.label :MondayOpen %><br />
+    <%= f.text_field :MondayOpen %>
+  </div>
+  <div class="field">
+    <%= f.label :TuesdayOpen %><br />
+    <%= f.text_field :TuesdayOpen %>
+  </div>
+  <div class="field">
+    <%= f.label :WednesdayOpen %><br />
+    <%= f.text_field :WednesdayOpen %>
+  </div>
+  <div class="field">
+    <%= f.label :ThursdayOpen %><br />
+    <%= f.text_field :ThursdayOpen %>
+  </div>
+  <div class="field">
+    <%= f.label :FridayOpen %><br />
+    <%= f.text_field :FridayOpen %>
+  </div>
+  <div class="field">
+    <%= f.label :SaturdayOpen %><br />
+    <%= f.text_field :SaturdayOpen %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

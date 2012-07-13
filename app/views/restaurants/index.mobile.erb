@@ -1,0 +1,53 @@
+<h1>Listing restaurants</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th>Phone</th>
+    <th>Description</th>
+    <th>Tagline</th>
+    <th>Logourl</th>
+    <th>Password</th>
+    <th>Iscustomer</th>
+    <th>Socialstatusmessage</th>
+    <th>Lat</th>
+    <th>Long</th>
+    <th>Cuisine</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= restaurant.Name %></td>
+        <td><%= restaurant.Address1 %></td>
+        <td><%= restaurant.Address2 %></td>
+        <td><%= restaurant.City %></td>
+        <td><%= restaurant.State %></td>
+        <td><%= restaurant.Zipcode %></td>
+        <td><%= restaurant.Phone %></td>
+        <td><%= restaurant.Description %></td>
+        <td><%= restaurant.TagLine %></td>
+        <td><%= restaurant.LogoURL %></td>
+        <td><%= restaurant.Password %></td>
+        <td><%= restaurant.isCustomer %></td>
+        <td><%= restaurant.SocialStatusMessage %></td>
+        <td><%= restaurant.Lat %></td>
+        <td><%= restaurant.Long %></td>
+        <td><%= restaurant.Cuisine %></td>
+        <td><%= link_to 'Show', restaurant %></td>
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Destroy', restaurant, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Restaurant', new_restaurant_path %>

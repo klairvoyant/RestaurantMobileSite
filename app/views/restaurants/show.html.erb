@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @restaurant.Name %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%= @restaurant.Address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%= @restaurant.Address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @restaurant.City %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @restaurant.State %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @restaurant.Zipcode %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @restaurant.Phone %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @restaurant.Description %>
+</p>
+
+<p>
+  <b>Tagline:</b>
+  <%= @restaurant.TagLine %>
+</p>
+
+<p>
+  <b>Logourl:</b>
+  <%= @restaurant.LogoURL %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @restaurant.Password %>
+</p>
+
+<p>
+  <b>Iscustomer:</b>
+  <%= @restaurant.isCustomer %>
+</p>
+
+<p>
+  <b>Socialstatusmessage:</b>
+  <%= @restaurant.SocialStatusMessage %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%= @restaurant.Lat %>
+</p>
+
+<p>
+  <b>Long:</b>
+  <%= @restaurant.Long %>
+</p>
+
+<p>
+  <b>Cuisine:</b>
+  <%= @restaurant.Cuisine %>
+</p>
+
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

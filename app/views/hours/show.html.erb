@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Restaurant:</b>
+  <%= @hour.restaurant_id %>
+</p>
+
+<p>
+  <b>Isopensunday:</b>
+  <%= @hour.isOpenSunday %>
+</p>
+
+<p>
+  <b>Isopenmonday:</b>
+  <%= @hour.isOpenMonday %>
+</p>
+
+<p>
+  <b>Isopentuesday:</b>
+  <%= @hour.isOpenTuesday %>
+</p>
+
+<p>
+  <b>Isopenwednesday:</b>
+  <%= @hour.isOpenWednesday %>
+</p>
+
+<p>
+  <b>Isopenthursday:</b>
+  <%= @hour.isOpenThursday %>
+</p>
+
+<p>
+  <b>Isopenfriday:</b>
+  <%= @hour.isOpenFriday %>
+</p>
+
+<p>
+  <b>Isopensaturday:</b>
+  <%= @hour.isOpenSaturday %>
+</p>
+
+<p>
+  <b>Sundayopen:</b>
+  <%= @hour.SundayOpen %>
+</p>
+
+<p>
+  <b>Mondayopen:</b>
+  <%= @hour.MondayOpen %>
+</p>
+
+<p>
+  <b>Tuesdayopen:</b>
+  <%= @hour.TuesdayOpen %>
+</p>
+
+<p>
+  <b>Wednesdayopen:</b>
+  <%= @hour.WednesdayOpen %>
+</p>
+
+<p>
+  <b>Thursdayopen:</b>
+  <%= @hour.ThursdayOpen %>
+</p>
+
+<p>
+  <b>Fridayopen:</b>
+  <%= @hour.FridayOpen %>
+</p>
+
+<p>
+  <b>Saturdayopen:</b>
+  <%= @hour.SaturdayOpen %>
+</p>
+
+
+<%= link_to 'Edit', edit_hour_path(@hour) %> |
+<%= link_to 'Back', hours_path %>

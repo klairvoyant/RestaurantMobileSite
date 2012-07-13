@@ -1,0 +1,129 @@
+<div data-role="page">
+
+  <div data-role="header" data-theme="b">
+    <div id="headerBlock">   <%= @restaurant.Name %> </div>
+
+  </div><!-- /header -->
+
+
+  <div data-role="content">
+
+    <div id="tag">
+
+      <%= @restaurant.TagLine %>
+
+    </div>
+
+
+
+     <div id="today">
+       Today’s Special:
+      </div>
+
+     <div id="social">
+       <%= @restaurant.SocialStatusMessage %>
+
+   </div>
+
+    <div id="hoursoperated"> Hours of Operation:</div>
+
+    <table>
+    <tr>
+      <td> Sunday</td>
+      <td>
+        <%  if (@restaurant.hour.isOpenSunday? )%>
+            <%=@restaurant.hour.SundayOpen  %>
+        <% else %>
+            <%= "Closed" %>
+        <% end %>
+      </td>
+
+    </tr>
+      <tr>
+        <td> Monday</td>
+        <td>
+          <%  if (@restaurant.hour.isOpenMonday? )%>
+              <%=@restaurant.hour.MondayOpen  %>
+          <% else %>
+              <%= "Closed" %>
+          <% end %>
+        </td>
+
+      </tr>
+      <tr>
+        <td> Tuesday</td>
+        <td>
+          <%  if (@restaurant.hour.isOpenTuesday? )%>
+              <%=@restaurant.hour.TuesdayOpen  %>
+          <% else %>
+              <%= "Closed" %>
+          <% end %>
+        </td>
+
+      </tr>
+      <tr>
+        <td> Wednesday</td>
+        <td>
+          <%  if (@restaurant.hour.isOpenWednesday?)%>
+              <%=@restaurant.hour.WednesdayOpen  %>
+          <% else %>
+              <%= "Closed" %>
+          <% end %>
+        </td>
+
+      </tr>
+      <tr>
+        <td> Thursday</td>
+        <td>
+          <%  if (@restaurant.hour.isOpenThursday?)%>
+              <%=@restaurant.hour.ThursdayOpen  %>
+          <% else %>
+              <%= "Closed" %>
+          <% end %>
+        </td>
+
+      </tr>
+      <tr>
+        <td> Friday</td>
+        <td>
+          <%  if (@restaurant.hour.isOpenFriday? )%>
+              <%=@restaurant.hour.FridayOpen %>
+          <% else %>
+              <%= "Closed" %>
+          <% end %>
+        </td>
+
+      </tr>
+      <tr>
+        <td> Saturday</td>
+        <td>
+          <%  if (@restaurant.hour.isOpenSaturday?)%>
+              <%=@restaurant.hour.SaturdayOpen  %>
+          <% else %>
+              <%= "Closed" %>
+          <% end %>
+        </td>
+
+      </tr>
+    </table>
+
+
+
+
+
+
+
+  </div><!-- /content -->
+
+  <div data-role="footer" data-theme="b">
+    <div data-role="navbar" data-iconpos="left">
+      <ul>
+
+        <li><a href="<%= url_for(menu_restaurant_path) %>" >Menu</a>  </li>
+        <li><a href="<%= url_for(contact_restaurant_path) %>" >Contact</a> </li>
+        <li><a href="<%= url_for(getApp_restaurant_path) %>" >Get App</a> </li>
+
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->

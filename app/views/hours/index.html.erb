@@ -1,0 +1,52 @@
+<h1>Listing hours</h1>
+
+<table>
+  <tr>
+    <th>Restaurant</th>
+    <th>Isopensunday</th>
+    <th>Isopenmonday</th>
+    <th>Isopentuesday</th>
+    <th>Isopenwednesday</th>
+    <th>Isopenthursday</th>
+    <th>Isopenfriday</th>
+    <th>Isopensaturday</th>
+    <th>Sundayopen</th>
+    <th>Mondayopen</th>
+    <th>Tuesdayopen</th>
+    <th>Wednesdayopen</th>
+    <th>Thursdayopen</th>
+    <th>Fridayopen</th>
+    <th>Saturdayopen</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hours.each do |hour| %>
+  <tr>
+    <td><%= link_to 'Show', hour %></td>
+    <td><%= link_to 'Edit', edit_hour_path(hour) %></td>
+    <td><%= link_to 'Destroy', hour, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= hour.restaurant_id %></td>
+    <td><%= hour.isOpenSunday %></td>
+    <td><%= hour.isOpenMonday %></td>
+    <td><%= hour.isOpenTuesday %></td>
+    <td><%= hour.isOpenWednesday %></td>
+    <td><%= hour.isOpenThursday %></td>
+    <td><%= hour.isOpenFriday %></td>
+    <td><%= hour.isOpenSaturday %></td>
+    <td><%= hour.SundayOpen %></td>
+    <td><%= hour.MondayOpen %></td>
+    <td><%= hour.TuesdayOpen %></td>
+    <td><%= hour.WednesdayOpen %></td>
+    <td><%= hour.ThursdayOpen %></td>
+    <td><%= hour.FridayOpen %></td>
+    <td><%= hour.SaturdayOpen %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hour', new_hour_path %>

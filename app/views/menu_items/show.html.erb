@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Isactive:</b>
+  <%= @menu_item.isActive %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @menu_item.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @menu_item.price %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @menu_item.description %>
+</p>
+
+<p>
+  <b>Thumbnailurl:</b>
+  <%= @menu_item.ThumbnailURL %>
+</p>
+
+<p>
+  <b>Bigimageurl:</b>
+  <%= @menu_item.BigImageURL %>
+</p>
+
+<p>
+  <b>Meals:</b>
+  <%= @menu_item.Meals %>
+</p>
+
+<p>
+  <b>Display order:</b>
+  <%= @menu_item.display_order %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
+<%= link_to 'Back', menu_items_path %>

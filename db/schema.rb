@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120713163142) do
+ActiveRecord::Schema.define(:version => 20120714125450) do
 
   create_table "hours", :force => true do |t|
     t.string   "restaurant_id"
@@ -31,6 +31,40 @@ ActiveRecord::Schema.define(:version => 20120713163142) do
     t.string   "SaturdayOpen"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "menu_items", :force => true do |t|
+    t.boolean  "isActive"
+    t.string   "name"
+    t.string   "price"
+    t.text     "description"
+    t.string   "ThumbnailURL"
+    t.string   "BigImageURL"
+    t.string   "Meals"
+    t.integer  "display_order"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "menu_items_menu_sections", :force => true do |t|
+    t.integer  "menu_item_id"
+    t.integer  "menu_section_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "menu_sections", :force => true do |t|
+    t.integer  "menu_id"
+    t.string   "name"
+    t.integer  "display_order"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "menus", :force => true do |t|
+    t.string   "restaurant_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "restaurants", :primary_key => "Name", :force => true do |t|

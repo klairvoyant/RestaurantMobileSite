@@ -14,8 +14,26 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1.json
   def show
     @restaurant = Restaurant.find(params[:id])
-    #@hour=Hours.find(params[:id])
-    #@hourData=@hour.find(params[:id])
+    @rest=Menu.where(restaurant_id=@restaurant.Name)
+
+
+    #@menu1=MenuSection.where("id= #{@rest.id} AND name='Salads'")
+
+
+    #@menu1=MenuSection.where(:id=> "#{@rest.id}"  )
+
+
+    #@menu=MenuSection.where("id= ? AND name= ?",@rest.id,"Salads")
+
+
+
+
+
+
+
+
+
+
 
 
     respond_to do |format|
@@ -85,7 +103,7 @@ class RestaurantsController < ApplicationController
   end
 
   def menu
-
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def contact

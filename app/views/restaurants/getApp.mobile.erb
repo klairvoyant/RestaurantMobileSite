@@ -1,1 +1,30 @@
-get app mobile
+<div data-role="page">
+
+  <div data-role="header" data-theme="b">
+    <div id="headerBlock">   <%= params[:id] %> </div>
+
+    <a href="<%=url_for(:back) %>" data-mini="true" data-role="button" data-icon="back" > Back</a>
+    <a href="<%=url_for(:action => 'show', :controller => 'restaurants',:format=>'mobile') %>"  data-icon="home" > Home</a>
+
+  </div><!-- /header -->
+
+
+  <div data-role="content">
+
+
+
+
+  </div><!-- /content -->
+
+  <div data-role="footer" data-theme="b">
+    <div data-role="navbar" data-iconpos="left">
+      <ul>
+
+        <li><a href="<%= url_for(menu_restaurant_path) %>" >Menu</a>  </li>
+        <li><a href="<%= url_for(contact_restaurant_path) %>" >Contact</a> </li>
+        <li><a href="<%= url_for(getApp_restaurant_path) %>"  class="ui-btn-active" >Get App</a> </li>
+
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->

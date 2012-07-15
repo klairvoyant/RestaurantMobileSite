@@ -119,7 +119,7 @@
     <div data-role="navbar" data-iconpos="left">
       <ul>
 
-        <li><a href="<%= url_for(menu_restaurant_path) %>" >Menu</a>  </li>
+        <li><a href="<%= url_for(menu_restaurant_path(@restaurant.id)) %>" >Menu</a>  </li>
         <li><a href="<%= url_for(contact_restaurant_path) %>" >Contact</a> </li>
         <li><a href="<%= url_for(getApp_restaurant_path) %>" >Get App</a> </li>
 

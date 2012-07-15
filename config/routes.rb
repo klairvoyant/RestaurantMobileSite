@@ -1,4 +1,10 @@
 RestaurantMobileSite::Application.routes.draw do
+  resources :menu_items
+
+  resources :menu_sections
+
+  resources :menus
+
   resources :hours
 
   resources :restaurants

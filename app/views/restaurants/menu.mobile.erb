@@ -25,12 +25,25 @@
 
     <div data-role="collapsible" data-collapsed="false">
       <h3>Appetizers</h3>
-      <p>I'm the collapsible set content for section 1.</p>
 
 
+      <% @restMenu=@restaurant.menu.menu_sections.where("name= ? ","Appetizers") %>
+      <% @restMenu.each do | rest| %>
 
+          <% @mesusec=MenuItemsMenuSection.find_all_by_menu_section_id(rest.id) %>
 
+          <% @mesusec.each do | h | %>
 
+              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+
+              <% @item.each do | item |  %>
+                  <div class="backGround">
+                    <%= item.name %> &nbsp;  <%= item.price %>
+                  </div>
+
+              <% end %>
+          <% end %>
+      <%end %>
 
     </div>
 
@@ -40,36 +53,85 @@
       <%  @restMenu=@restaurant.menu.menu_sections.where("name= ? ","Salads") %>
       <% @restMenu.each do | rest| %>
 
-          <% @mesusec=MenuItemsMenuSections.find_all_by_menu_section_id(rest.id) %>
+          <% @mesusec=MenuItemsMenuSection.find_all_by_menu_section_id(rest.id) %>
 
           <% @mesusec.each do | h | %>
 
                     <%#= MenuItem.find(h.menu_item_id).name %>
-                    <% @item=MenuItem.where("id= ? AND Meals= ? ",h.menu_item_id,"Dinner") %>
+                    <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
 
                     <% @item.each do | item |  %>
-                        <p>
-                            <%= item.name %>
-                        </p>
+                        <div class="backGround">
+                            <%= item.name %>       &nbsp;  <%= item.price %>
+                        </div>
+
                     <% end %>
-
-
-
           <% end %>
       <%end %>
     </div>
 
     <div data-role="collapsible">
       <h3>Sandwiches</h3>
-      <p>I'm the collapsible set content for section 2.</p>
+      <%  @restMenu=@restaurant.menu.menu_sections.where("name= ? ","Sandwiches") %>
+      <% @restMenu.each do | rest| %>
+
+          <% @mesusec=MenuItemsMenuSection.find_all_by_menu_section_id(rest.id) %>
+
+          <% @mesusec.each do | h | %>
+
+              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+
+              <% @item.each do | item |  %>
+                  <div class="backGround">
+                    <%= item.name %>     &nbsp;  <%= item.price %>
+                  </div>
+
+              <% end %>
+          <% end %>
+      <%end %>
+
     </div>
     <div data-role="collapsible">
       <h3>Entrees</h3>
-      <p>I'm the collapsible set content for section 2.</p>
+
+      <%  @restMenu=@restaurant.menu.menu_sections.where("name= ? ","Entrees") %>
+      <% @restMenu.each do | rest| %>
+
+          <% @mesusec=MenuItemsMenuSection.find_all_by_menu_section_id(rest.id) %>
+
+          <% @mesusec.each do | h | %>
+
+              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+
+              <% @item.each do | item |  %>
+                  <div class="backGround">
+
+                    <a href="<%= url_for(:controller => "restaurants",:action => "desc",:itemID=>"#{item.id}") %>" > <%= item.name %>           &nbsp;  <%= item.price %></a>
+                  </div>
+
+              <% end %>
+          <% end %>
+      <%end %>
     </div>
     <div data-role="collapsible">
       <h3>Desserts</h3>
-      <p>I'm the collapsible set content for section 2.</p>
+      <%  @restMenu=@restaurant.menu.menu_sections.where("name= ? ","Desserts") %>
+      <% @restMenu.each do | rest| %>
+
+          <% @mesusec=MenuItemsMenuSection.find_all_by_menu_section_id(rest.id) %>
+
+          <% @mesusec.each do | h | %>
+
+              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+
+              <% @item.each do | item |  %>
+                  <div class="backGround">
+                    <%= item.name %>            &nbsp;  <%= item.price %>
+                  </div>
+
+              <% end %>
+          <% end %>
+      <%end %>
     </div>
 
   </div>

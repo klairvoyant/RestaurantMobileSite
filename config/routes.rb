@@ -1,4 +1,6 @@
 RestaurantMobileSite::Application.routes.draw do
+  resources :menu_items_menu_sections
+
   resources :menu_items
 
   resources :menu_sections
@@ -14,6 +16,7 @@ RestaurantMobileSite::Application.routes.draw do
     get 'menu'
     get 'contact'
     get 'getApp'
+    get 'desc'
     end
   end
 

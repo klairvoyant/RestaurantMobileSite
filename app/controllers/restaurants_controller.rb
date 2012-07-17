@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
+  layout 'application', :except => [:contact ]
   def index
     @restaurants = Restaurant.all
 
@@ -15,27 +16,6 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
     @rest=Menu.where(restaurant_id=@restaurant.Name)
-
-
-    #@menu1=MenuSection.where("id= #{@rest.id} AND name='Salads'")
-
-
-    #@menu1=MenuSection.where(:id=> "#{@rest.id}"  )
-
-
-    #@menu=MenuSection.where("id= ? AND name= ?",@rest.id,"Salads")
-
-
-
-
-
-
-
-
-
-
-
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @restaurant }
@@ -107,10 +87,17 @@ class RestaurantsController < ApplicationController
   end
 
   def contact
+    @address=Restaurant.find(params[:id])
 
   end
 
   def getApp
+
+  end
+
+  def desc
+
+    @item=MenuItem.find(params[:itemID])
 
   end
 end

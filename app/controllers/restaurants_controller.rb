@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1.json
   def show
     @restaurant = Restaurant.find(params[:id])
-    @rest=Menu.where(restaurant_id=@restaurant.Name)
+    @rest=Menu.where(restaurant_id=@restaurant.name)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @restaurant }

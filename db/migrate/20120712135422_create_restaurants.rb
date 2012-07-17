@@ -1,6 +1,6 @@
 class CreateRestaurants < ActiveRecord::Migration
   def change
-    create_table :restaurants, :id => false, :primary_key => :Name do |t|
+    create_table :restaurants, :id => false do |t|
       t.string :Name
       t.string :Address1
       t.string :Address2
@@ -20,5 +20,6 @@ class CreateRestaurants < ActiveRecord::Migration
 
       t.timestamps
     end
+    execute "ALTER TABLE restaurants ADD PRIMARY KEY (Name);"
   end
 end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Menu item:</b>
+  <%= @menu_items_menu_section.menu_item_id %>
+</p>
+
+<p>
+  <b>Menu section:</b>
+  <%= @menu_items_menu_section.menu_section_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_items_menu_section_path(@menu_items_menu_section) %> |
+<%= link_to 'Back', menu_items_menu_sections_path %>

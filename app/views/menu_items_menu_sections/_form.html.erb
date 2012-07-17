@@ -1,0 +1,27 @@
+<%= form_for(@menu_items_menu_section) do |f| %>
+  <% if @menu_items_menu_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menu_items_menu_section.errors.count, "error") %> prohibited this menu_items_menu_section from being saved:</h2>
+
+      <ul>
+      <% @menu_items_menu_section.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :menu_item_id %><br />
+    <!--<#%= f.number_field :menu_item_id %>-->
+    <%= f.select(:menu_item_id,  MenuItem.all.collect {|c| [ c.name, c.id ] })%>
+  </div>
+  <div class="field">
+    <%= f.label :menu_section_id %><br />
+    <!--<%#= f.number_field :menu_section_id %>-->
+    <%= f.select(:menu_section_id,  MenuSection.all.collect {|c| [ c.name, c.id ] })%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

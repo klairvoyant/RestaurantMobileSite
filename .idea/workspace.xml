@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab7c44b6-2990-4b6e-9972-577a8d7748d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120717174324_removeprimary.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120717174457_primaryadd.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20120717164532_addprimary.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RestaurantMobileSite.iws" />
@@ -717,7 +714,11 @@
       <created>1342545356202</created>
       <updated>1342545356202</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="july 17">
+      <created>1342547154147</created>
+      <updated>1342547154147</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">

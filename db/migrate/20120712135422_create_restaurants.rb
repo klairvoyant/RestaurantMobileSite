@@ -20,6 +20,7 @@ class CreateRestaurants < ActiveRecord::Migration
 
       t.timestamps
     end
-    execute "ALTER TABLE restaurants ADD PRIMARY KEY (Name);"
+    execute "ALTER TABLE restaurants ADD PRIMARY KEY ('Name');"
+
   end
 end

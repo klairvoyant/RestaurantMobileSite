@@ -38,7 +38,8 @@
 
               <% @item.each do | item |  %>
                   <div class="backGround">
-                    <%= item.name %> &nbsp;  <%= item.price %>
+                    <!--<#%= item.name %> &nbsp;  <%#= item.price %>-->
+                    <a href="<%= url_for(:controller => "restaurants",:action => "desc",:itemID=>"#{item.id}") %>" > <%= item.name %>           &nbsp;  <%= item.price %></a>
                   </div>
 
               <% end %>
@@ -62,7 +63,7 @@
 
                     <% @item.each do | item |  %>
                         <div class="backGround">
-                            <%= item.name %>       &nbsp;  <%= item.price %>
+                          <a href="<%= url_for(:controller => "restaurants",:action => "desc",:itemID=>"#{item.id}") %>" > <%= item.name %>           &nbsp;  <%= item.price %></a>
                         </div>
 
                     <% end %>
@@ -83,7 +84,7 @@
 
               <% @item.each do | item |  %>
                   <div class="backGround">
-                    <%= item.name %>     &nbsp;  <%= item.price %>
+                    <a href="<%= url_for(:controller => "restaurants",:action => "desc",:itemID=>"#{item.id}") %>" > <%= item.name %>           &nbsp;  <%= item.price %></a>
                   </div>
 
               <% end %>

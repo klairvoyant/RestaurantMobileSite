@@ -38,7 +38,7 @@ $(function initialize() {
         map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 
-    //setTimeout(loadMap,3000);
+    setTimeout(loadMap,3000);
 
     });
 

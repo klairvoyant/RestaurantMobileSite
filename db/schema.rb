@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717133132) do
+ActiveRecord::Schema.define(:version => 20120718024853) do
 
   create_table "hours", :force => true do |t|
     t.string   "restaurant_id"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20120717133132) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "restaurants", :primary_key => "Name", :force => true do |t|
+  create_table "restaurants", :primary_key => "name", :force => true do |t|
     t.string   "Address1"
     t.string   "Address2"
     t.string   "City"

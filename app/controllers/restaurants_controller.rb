@@ -16,6 +16,7 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
     @rest=Menu.where(restaurant_id=@restaurant.name)
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @restaurant }
@@ -81,7 +82,6 @@ class RestaurantsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
   def menu
     @restaurant = Restaurant.find(params[:id])
   end
@@ -92,12 +92,6 @@ class RestaurantsController < ApplicationController
   end
 
   def getApp
-
-  end
-
-  def desc
-
-    @item=MenuItem.find(params[:itemID])
 
   end
 end

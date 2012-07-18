@@ -1,7 +1,6 @@
 class Addprimary < ActiveRecord::Migration
   def up
-    execute("ALTER TABLE restaurants ADD PRIMARY KEY (Name);")
-
+    execute("ALTER TABLE restaurants ADD PRIMARY KEY (name);")
   end
 
   def down

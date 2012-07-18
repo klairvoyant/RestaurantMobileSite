@@ -1,6 +1,6 @@
 class CreateRestaurants < ActiveRecord::Migration
   def change
-    create_table :restaurants, :id => false do |t|
+    create_table :restaurants, :id => false  do |t|
       t.string :name
       t.string :Address1
       t.string :Address2
@@ -20,7 +20,5 @@ class CreateRestaurants < ActiveRecord::Migration
 
       t.timestamps
     end
-
-
   end
 end

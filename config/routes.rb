@@ -1,4 +1,6 @@
 RestaurantMobileSite::Application.routes.draw do
+  resources :restaurants
+
   resources :menu_items_menu_sections
 
   resources :menu_items
@@ -8,8 +10,6 @@ RestaurantMobileSite::Application.routes.draw do
   resources :menus
 
   resources :hours
-
-  resources :restaurants
 
   resources :restaurants do
     member do

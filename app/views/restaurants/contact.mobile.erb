@@ -12,7 +12,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body data-lat="<%=@address.Lat %>" data-long="<%=@address.Long %>" onload="loadMap()">
+<body data-lat="<%=@address.lat %>" data-long="<%=@address.long %>" onload="loadMap()">
 <div data-role="page">
 
   <div data-role="header" data-theme="b">
@@ -32,9 +32,9 @@
       Contact Us:
     </div>
 
-    <div class="text">Phone: <span class="text2"><%= @address.Phone %></span> </div>
+    <div class="text">Phone: <span class="text2"><%= @address.phone %></span> </div>
     <div class="text">
-      Address:<span class="text2"><%=@address.Address1 %>,<%= @address.Address2 %>,<%= @address.City %>,<%= @address.State %> </span>
+      Address:<span class="text2"><%=@address.address1 %>,<%= @address.address2 %>,<%= @address.city %>,<%= @address.state %> </span>
     </div>
 
     <div id="map_canvas">

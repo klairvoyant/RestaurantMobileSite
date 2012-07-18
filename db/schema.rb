@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718024853) do
+ActiveRecord::Schema.define(:version => 20120718064938) do
 
   create_table "hours", :force => true do |t|
     t.string   "restaurant_id"
@@ -34,14 +34,14 @@ ActiveRecord::Schema.define(:version => 20120718024853) do
   end
 
   create_table "menu_items", :force => true do |t|
-    t.boolean  "isActive"
+    t.string   "BigImageURL"
+    t.string   "meals"
+    t.string   "ThumbnailURL"
+    t.text     "description"
+    t.integer  "display_order"
+    t.boolean  "isactive"
     t.string   "name"
     t.string   "price"
-    t.text     "description"
-    t.string   "ThumbnailURL"
-    t.string   "BigImageURL"
-    t.string   "Meals"
-    t.integer  "display_order"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -68,21 +68,21 @@ ActiveRecord::Schema.define(:version => 20120718024853) do
   end
 
   create_table "restaurants", :primary_key => "name", :force => true do |t|
-    t.string   "Address1"
-    t.string   "Address2"
-    t.string   "City"
-    t.string   "State"
-    t.string   "Zipcode"
-    t.string   "Phone"
-    t.text     "Description"
-    t.string   "TagLine"
-    t.string   "LogoURL"
-    t.string   "Password"
-    t.boolean  "isCustomer"
-    t.string   "SocialStatusMessage"
-    t.string   "Lat"
-    t.string   "Long"
-    t.string   "Cuisine"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "phone"
+    t.text     "description"
+    t.string   "tagline"
+    t.string   "logourl"
+    t.string   "password"
+    t.boolean  "iscustomer"
+    t.string   "socialstatusmessage"
+    t.string   "lat"
+    t.string   "long"
+    t.string   "cuisine"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end

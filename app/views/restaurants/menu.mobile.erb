@@ -34,7 +34,7 @@
 
           <% @mesusec.each do | h | %>
 
-              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+              <% @item=MenuItem.where("id= ? AND meals= ? AND isactive= ? ",h.menu_item_id,"Dinner",true) %>
 
               <% @item.each do | item |  %>
                   <div class="backGround">
@@ -58,7 +58,7 @@
           <% @mesusec.each do | h | %>
 
                     <%#= MenuItem.find(h.menu_item_id).name %>
-                    <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+                    <% @item=MenuItem.where("id= ? AND meals= ? AND isactive= ? ",h.menu_item_id,"Dinner",true) %>
 
                     <% @item.each do | item |  %>
                         <div class="backGround">
@@ -79,7 +79,7 @@
 
           <% @mesusec.each do | h | %>
 
-              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+              <% @item=MenuItem.where("id= ? AND meals= ? AND isactive= ? ",h.menu_item_id,"Dinner",true) %>
 
               <% @item.each do | item |  %>
                   <div class="backGround">
@@ -101,7 +101,7 @@
 
           <% @mesusec.each do | h | %>
 
-              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+              <% @item=MenuItem.where("id= ? AND meals= ? AND isactive= ? ",h.menu_item_id,"Dinner",true) %>
 
               <% @item.each do | item |  %>
                   <div class="backGround">
@@ -122,7 +122,7 @@
 
           <% @mesusec.each do | h | %>
 
-              <% @item=MenuItem.where("id= ? AND Meals= ? AND isActive= ? ",h.menu_item_id,"Dinner",true) %>
+              <% @item=MenuItem.where("id= ? AND meals= ? AND isactive= ? ",h.menu_item_id,"Dinner",true) %>
 
               <% @item.each do | item |  %>
                   <div class="backGround">

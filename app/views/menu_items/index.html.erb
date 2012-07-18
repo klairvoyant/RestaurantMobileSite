@@ -2,14 +2,14 @@
 
 <table>
   <tr>
+    <th>Bigimageurl</th>
+    <th>Meals</th>
+    <th>Thumbnailurl</th>
+    <th>Description</th>
+    <th>Display order</th>
     <th>Isactive</th>
     <th>Name</th>
     <th>Price</th>
-    <th>Description</th>
-    <th>Thumbnailurl</th>
-    <th>Bigimageurl</th>
-    <th>Meals</th>
-    <th>Display order</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,14 +17,14 @@
 
 <% @menu_items.each do |menu_item| %>
   <tr>
-    <td><%= menu_item.isActive %></td>
+    <td><%= menu_item.BigImageURL %></td>
+    <td><%= menu_item.meals %></td>
+    <td><%= menu_item.ThumbnailURL %></td>
+    <td><%= menu_item.description %></td>
+    <td><%= menu_item.display_order %></td>
+    <td><%= menu_item.isactive %></td>
     <td><%= menu_item.name %></td>
     <td><%= menu_item.price %></td>
-    <td><%= menu_item.description %></td>
-    <td><%= menu_item.ThumbnailURL %></td>
-    <td><%= menu_item.BigImageURL %></td>
-    <td><%= menu_item.Meals %></td>
-    <td><%= menu_item.display_order %></td>
     <td><%= link_to 'Show', menu_item %></td>
     <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
     <td><%= link_to 'Destroy', menu_item, confirm: 'Are you sure?', method: :delete %></td>

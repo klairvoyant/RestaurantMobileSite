@@ -26,21 +26,21 @@
   <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.name %></td>
-        <td><%= restaurant.Address1 %></td>
-        <td><%= restaurant.Address2 %></td>
-        <td><%= restaurant.City %></td>
-        <td><%= restaurant.State %></td>
-        <td><%= restaurant.Zipcode %></td>
-        <td><%= restaurant.Phone %></td>
-        <td><%= restaurant.Description %></td>
-        <td><%= restaurant.TagLine %></td>
-        <td><%= restaurant.LogoURL %></td>
-        <td><%= restaurant.Password %></td>
-        <td><%= restaurant.isCustomer %></td>
-        <td><%= restaurant.SocialStatusMessage %></td>
-        <td><%= restaurant.Lat %></td>
-        <td><%= restaurant.Long %></td>
-        <td><%= restaurant.Cuisine %></td>
+        <td><%= restaurant.address1 %></td>
+        <td><%= restaurant.address2 %></td>
+        <td><%= restaurant.city %></td>
+        <td><%= restaurant.state %></td>
+        <td><%= restaurant.zipcode %></td>
+        <td><%= restaurant.phone %></td>
+        <td><%= restaurant.description %></td>
+        <td><%= restaurant.tagline %></td>
+        <td><%= restaurant.logourl %></td>
+        <td><%= restaurant.password %></td>
+        <td><%= restaurant.iscustomer %></td>
+        <td><%= restaurant.socialstatusmessage %></td>
+        <td><%= restaurant.lat %></td>
+        <td><%= restaurant.long %></td>
+        <td><%= restaurant.cuisine %></td>
         <td><%= link_to 'Show', restaurant %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
         <td><%= link_to 'Destroy', restaurant, confirm: 'Are you sure?', method: :delete %></td>

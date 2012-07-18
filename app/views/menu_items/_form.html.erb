@@ -12,8 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :isActive %><br />
-    <%= f.check_box :isActive %>
+    <%= f.label :BigImageURL %><br />
+    <%= f.text_field :BigImageURL %>
+  </div>
+  <div class="field">
+    <%= f.label :meals %><br />
+    <%= f.text_field :meals %>
+  </div>
+  <div class="field">
+    <%= f.label :ThumbnailURL %><br />
+    <%= f.text_field :ThumbnailURL %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :display_order %><br />
+    <%= f.text_field :display_order %>
+  </div>
+  <div class="field">
+    <%= f.label :isactive %><br />
+    <%= f.text_field :isactive %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
@@ -22,26 +42,6 @@
   <div class="field">
     <%= f.label :price %><br />
     <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :ThumbnailURL %><br />
-    <%= f.text_field :ThumbnailURL %>
-  </div>
-  <div class="field">
-    <%= f.label :BigImageURL %><br />
-    <%= f.text_field :BigImageURL %>
-  </div>
-  <div class="field">
-    <%= f.label :Meals %><br />
-    <%= f.text_field :Meals %>
-  </div>
-  <div class="field">
-    <%= f.label :display_order %><br />
-    <%= f.number_field :display_order %>
   </div>
   <div class="actions">
     <%= f.submit %>

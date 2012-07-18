@@ -1,7 +1,6 @@
 class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
-  layout 'application', :except => [:contact ]
   def index
     @restaurants = Restaurant.all
 
@@ -92,6 +91,12 @@ class RestaurantsController < ApplicationController
   end
 
   def getApp
+
+  end
+
+  def desc
+
+    @item=MenuItem.find(params[:itemID])
 
   end
 end

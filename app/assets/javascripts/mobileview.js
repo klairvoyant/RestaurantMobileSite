@@ -17,6 +17,7 @@ function loadMap() {
     map.setOptions(opt);
 
 
+
     var marker = new google.maps.Marker({
         position: loc,
         map: map
@@ -27,17 +28,17 @@ function loadMap() {
 
 $(function initialize() {
 
-        //var loc = new google.maps.LatLng(50.233152,7.866211);
+        var loc = new google.maps.LatLng(50.233152,7.866211);
         var myOptions = {
-            zoom:7,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-            //center: loc
+            zoom:1,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: loc
         }
 
         map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 
-    setTimeout(loadMap,3000);
+    setTimeout(loadMap,2000);
 
     });
 

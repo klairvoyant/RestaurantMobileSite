@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ab7c44b6-2990-4b6e-9972-577a8d7748d2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/mobileview.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/mobileview.js" />
     </list>
     <ignored path="RestaurantMobileSite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -901,7 +900,11 @@
       <created>1342606230037</created>
       <updated>1342606230037</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="18">
+      <created>1342609802340</created>
+      <updated>1342609802340</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
